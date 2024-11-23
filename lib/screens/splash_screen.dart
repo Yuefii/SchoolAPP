@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:schoolapp/core/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:schoolapp/screens/login_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   static String routeName = 'SplashScreen';
@@ -9,6 +10,11 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 5), () {
+      Navigator.pushNamedAndRemoveUntil(
+          context, LoginScreen.routeName, (route) => false);
+    });
+
     return Scaffold(
       body: Center(
         child: Row(
