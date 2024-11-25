@@ -10,6 +10,7 @@ const Color kErrorBorderColor = Color(0xFFe11d48);
 const Color kOtherColor = Color(0xFFfafafa);
 
 const kDefaultPadding = 20.0;
+const sizedBox = SizedBox(height: kDefaultPadding);
 
 const String mobilePattern = r'(^(?:[+0]9)?[0-9]{10,12}$)';
 const String emailPattern =
