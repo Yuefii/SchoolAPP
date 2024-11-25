@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:schoolapp/components/button.dart';
 import 'package:schoolapp/core/constants.dart';
+import 'package:schoolapp/screens/home_screen.dart';
 
 late bool _passwordVisible;
 
@@ -98,7 +99,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           sizedBox,
                           DefaultButton(
                             onPress: () {
-                              if (_formKey.currentState!.validate()) {}
+                              if (_formKey.currentState!.validate()) {
+                                Navigator.pushNamedAndRemoveUntil(context,
+                                    HomeScreen.routeName, (route) => false);
+                              }
                             },
                             title: 'Login',
                           ),
